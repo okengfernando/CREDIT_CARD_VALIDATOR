@@ -70,14 +70,4 @@ class CreditCard:
         return cls(card_to_check)
 
 
-card_number = int(input("Enter Card No :"))
-card = CreditCard.set_card(card_number)
-print(card.company)
-print('Card : ', card.card_no)
-print(card.first_check())
-print(card.checksum)
-print(card.validate())
 
-# 4388 5760 1840 2626
-# 379354508162306
-# 5300202020302098

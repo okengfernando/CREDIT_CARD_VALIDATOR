@@ -7,10 +7,15 @@ class Testing_Credit_Card_Methods(unittest.TestCase):
     def test_sample(self):
         pass
     
-    def if_VALID_removal_of_symbols_and_spaces(self):
+    def test_if_VALID_removal_of_symbols_and_spaces(self):
         self.assertEqual(dr.pre_process('3000-2300-1235-678') , 300023001235678)
         self.assertEqual(dr.pre_process('3000 2300 1235 678') , 300023001235678)
         self.assertEqual(dr.pre_process('3000 23001235 678') , 300023001235678)
+
+    def test_INVALID_removal_of_symbols_and_white_spaces(self):
+        self.assertFalse(dr.pre_process('3000=2300+1235+678') == 300023001235678)
+        self.assertFalse(dr.pre_process('3000&23001235&678') == 300023001235678)
+        
 
     def test_VALID_length_of_the_credit_card_digits(self):
         self.assertTrue(cr.CreditCard(4388576018402626).first_check() == "First check : Valid in terms of length.")

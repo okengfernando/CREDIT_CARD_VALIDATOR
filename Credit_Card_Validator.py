@@ -7,6 +7,10 @@ class CreditCard:
 
     @property
     def company(self):
+        '''
+        This Method checks startting digits then returns the credit Card manufacturer eg master card
+        or Visa
+        '''
         comp = None
         if str(self.card_no).startswith('4'):
             comp = 'Visa Card'
@@ -28,6 +32,9 @@ class CreditCard:
         return 'Company : ' + str(comp)
 
     def first_check(self):
+        '''
+        Method to check length of the credit card digits entered
+        '''
         if 13 <= len(str(self.card_no)) <= 19:
             message = "First check : Valid in terms of length."
 
@@ -36,6 +43,9 @@ class CreditCard:
         return message
 
     def validate(self):
+        '''
+        This method checks validity of the credit card
+        '''
         # double every second digit from right to left
         sum_ = 0
         crd_no = str(self.card_no)

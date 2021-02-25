@@ -2,15 +2,18 @@ import Credit_Card_Validator as cr
 
 if __name__ == '__main__':
     card_number = (input("Enter Card No in format (XXXX-XXXX or XXXX XXXX or XXXXXXXX) :"))
-
-    if " " in card_number:
-        card_number = int(card_number.replace(" ",""))
-    elif "-" in card_number:
-        card_number = int(card_number.replace("-",""))
+    def pre_process(card_number):
+        if " " in card_number:
+            card_number = int(card_number.replace(" ",""))
+        elif "-" in card_number:
+            card_number = int(card_number.replace("-",""))
+        
+        return card_number
+    
+    x = pre_process(card_number)
     
     
-
-    card = cr.CreditCard.set_card(card_number)
+    card = cr.CreditCard.set_card(x)
     print(card.company)
     print('Card : ', card.card_no)
     print(card.first_check())

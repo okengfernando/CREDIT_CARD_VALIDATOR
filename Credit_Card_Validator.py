@@ -2,6 +2,9 @@
 
 
 class CreditCard:
+    '''
+    Credit card class with several methods to process information
+    '''
     def __init__(self, card_no):
         self.card_no = card_no
 

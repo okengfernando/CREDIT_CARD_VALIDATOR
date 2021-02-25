@@ -5,12 +5,12 @@ def pre_process(card_number):
     This Method removes spaces and hyphens so as to put it
     in a proprer format
     '''
-        if " " in card_number:
-            card_number = int(card_number.replace(" ",""))
-        elif "-" in card_number:
-            card_number = int(card_number.replace("-",""))
-        
-        return card_number
+    if " " in card_number:
+        card_number = int(card_number.replace(" ",""))
+    elif "-" in card_number:
+        card_number = int(card_number.replace("-",""))
+    
+    return card_number
 
 
 

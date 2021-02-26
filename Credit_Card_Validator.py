@@ -39,10 +39,10 @@ class CreditCard:
         Method to check length of the credit card digits entered
         '''
         if 13 <= len(str(self.card_no)) <= 19:
-            message = "First check : Valid in terms of length."
+            message = "PASSED First check : Valid in terms of length."
 
         else:
-            message = "First check : Check Card number once again it must be of 13 or 16 digits long."
+            message = "FAILED First check : Check Card number once again it must be of 13 or 16 digits long."
         return message
 
     def validate(self):

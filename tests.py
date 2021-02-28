@@ -4,7 +4,7 @@ import driver_code as dr
 
 class Testing_Credit_Card_Methods(unittest.TestCase):
 
-    def test_sample(self):
+    def test_methods(self):
         pass
     
     def test_if_VALID_removal_of_symbols_and_spaces(self):

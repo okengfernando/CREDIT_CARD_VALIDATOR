@@ -3,7 +3,7 @@ import Credit_Card_Validator as cr
 def pre_process(card_number):
     '''
     This Method removes spaces and hyphens so as to put it
-    in a proprer format
+    in a proprer int format
     '''
     if " " in card_number:
         card_number = int(card_number.replace(" ",""))

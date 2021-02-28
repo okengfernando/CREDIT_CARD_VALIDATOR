@@ -14,8 +14,6 @@ def pre_process(card_number):
 
 
 
-
-
 if __name__ == '__main__':
     card_number = (input("Enter Card No in format (XXXX-XXXX or XXXX XXXX or XXXXXXXX) :"))
        
